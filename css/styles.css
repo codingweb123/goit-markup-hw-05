@@ -72,8 +72,6 @@ header ul li a:active, header ul li a:focus {
     border-color: var(--pressed);
 }
 .btn {
-    width: 169px;
-    height: 56px;
     font-weight: 500;
     color: var(--white);
     line-height: 1.5;
