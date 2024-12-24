@@ -1,0 +1,92 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--primary: #4d5ae5;
+	--pressed: #404bbf;
+	--dark: #2e2f42;
+	--success: #31d0aa;
+	--text: #434455;
+	--subtle-text: #8e8f99;
+	--accent: #e7e9fc;
+	--light: #f4f4fd;
+	--modal-overlay: #2e2f42;
+	--hero-bg: #2e2f42b2;
+	--white: #fff;
+	--modal: #fcfcfc;
+}
+ul li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+button {
+    border: 0;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.333;
+    color: var(--dark);
+}
+.logo {
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--dark);
+}
+.logo span {
+    color: var(--primary);
+}
+nav ul li {
+    font-weight: 500;
+    color: var(--dark);
+}
+address li a,
+p {
+    color: var(--text);
+}
+nav ul li:hover,
+address > a:hover {
+    color: var(--pressed);
+}
+nav ul li:active {
+    border-color: var(--pressed);
+    border-bottom: 2px;
+}
+.btn {
+    width: 169px;
+    height: 56px;
+    font-weight: 500;
+    box-shadow: 0px 4px 4px 0px #00000026;
+    color: var(--white);
+    border-radius: 4px;
+    background-color: var(--primary)
+}
+.btn:hover {
+    background-color: var(--pressed);
+}
+h1 {
+    font-size: 56px;
+    font-weight: 700;
+}
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+footer {
+    background-color: var(--dark);
+}
+footer p {
+    color: var(--light);
+}
+footer .logo {
+    color: var(--white);
+}
