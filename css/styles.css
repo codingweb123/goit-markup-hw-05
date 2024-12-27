@@ -63,7 +63,7 @@ body {
     display: flex;
     gap: 40px;
 }
-.header .header-list ul li {
+.header .header-list ul li a {
     padding: 24px 0;
 }
 .header .header-contacts ul{
@@ -75,6 +75,7 @@ body {
 }
 .visually-hidden {
     display: none;
+    visibility: hidden;
 }
 .wrapper .solutions {
     display: flex;
