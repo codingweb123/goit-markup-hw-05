@@ -1,3 +1,8 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 :root {
 	--primary: #4d5ae5;
 	--pressed: #404bbf;
@@ -27,8 +32,107 @@ body {
     color: var(--text);
     background: var(--white);
 }
-header {
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 24px 156px;
+    border-bottom: 1px solid var(--accent);
     background-color: var(--white);
+}
+.header .header-list {
+    display: flex;
+    gap: 76px;
+}
+.header .header-list ul {
+    display: flex;
+    gap: 40px;
+}
+.header .header-contacts {
+    display: block;
+}
+.header .header-contacts ul{
+    display: flex;
+    gap: 40px;
+}
+.wrapper .section {
+    padding: 120px 156px;
+}
+.wrapper .solutions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+}
+.wrapper .solutions .solutions-title {
+    margin-top: 69px;
+    max-width: 496px;
+}
+.wrapper .solutions .btn {
+    padding: 16px 32px;
+    border-radius: 4px;
+    margin-bottom: 69px;
+}
+.wrapper .skills {
+    width: 100%;
+}
+.wrapper .skills ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 24px;
+}
+.wrapper .skills ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 264px;
+}
+.wrapper .skills h2 {
+    display: none;   
+}
+.wrapper .team {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
+.wrapper .team ul {
+    display: flex;
+    gap: 24px;
+}
+.wrapper .team ul li {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 8%),
+                                    0px 1px 1px rgba(46, 47, 66, 16%),
+                                    0px 2px 1px rgba(46, 47, 66,  8%);
+}
+.wrapper .team ul li h3 {
+    margin-top: 24px;
+}
+.wrapper .team ul li p {
+    margin-top: 8px;
+    margin-bottom: 32px;
+}
+.wrapper .portfolio {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
+.wrapper .portfolio ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 24px;
+}
+.wrapper .portfolio ul li h3 {
+    margin-top: 27px;
+    margin-left: 16px;
+}
+.wrapper .portfolio ul li p {
+    margin-top: 8px;
+    margin-bottom: 32px;
+    margin-left: 16px;
 }
 .logo {
     font-family: "Raleway", sans-serif;
@@ -120,9 +224,14 @@ h3 {
     background-color: var(--white);
 }
 .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 100px 156px;
     background-color: var(--dark);
 }
 .footer .footer-text {
+    max-width: 264px;
     color: var(--light);
 }
 .footer .logo .logo-part {
