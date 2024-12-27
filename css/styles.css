@@ -75,13 +75,11 @@ body {
     border-radius: 4px;
     margin-bottom: 69px;
 }
-.wrapper .skills {
-    width: 100%;
-}
 .wrapper .skills ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
     gap: 24px;
 }
@@ -101,6 +99,9 @@ body {
 }
 .wrapper .team ul {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 24px;
 }
 .wrapper .team ul li {
