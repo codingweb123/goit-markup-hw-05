@@ -86,7 +86,8 @@ body {
 	margin-top: 69px;
 	max-width: 496px;
 }
-.wrapper .solutions .btn {
+.wrapper .solutions .btn,
+.wrapper .solutions button {
 	padding: 16px 32px;
 	border-radius: 4px;
 	margin-bottom: 69px;
@@ -386,7 +387,8 @@ h3 {
 	gap: 16px;
 }
 .footer .socials .icons a.icon:hover,
-.footer .socials .icons a.icon:active {
+.footer .socials .icons a.icon:active,
+.footer .socials .icons a.icon:focus {
     background-color: var(--success);
 }
 .footer .socials .icons a.icon {
