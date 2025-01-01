@@ -98,9 +98,6 @@ body {
 	background-color: var(--primary);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.wrapper .solutions .button {
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 .wrapper .skills ul {
 	display: flex;
 	justify-content: center;
@@ -182,7 +179,7 @@ body {
 	background-color: var(--pressed);
 }
 .wrapper .team ul li a:hover,
-.wrapper .team ul li a:focus {
+.wrapper .team ul li a:active {
 	background-color: var(--pressed);
 }
 .wrapper .team ul li h3 {
