@@ -87,7 +87,7 @@ body {
 	max-width: 496px;
 }
 .wrapper .solutions .btn,
-.wrapper .solutions button {
+.wrapper .solutions .button {
 	padding: 16px 32px;
 	border-radius: 4px;
 	margin-bottom: 69px;
@@ -167,10 +167,12 @@ body {
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
+    fill: var(--light);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	background-color: var(--primary);
 }
-.wrapper .team ul li:hover .icons a.icon {
+.wrapper .team ul li:hover .icons a.icon,
+.wrapper .team ul li:focus .icons a.icon {
     background-color: var(--pressed);
 }
 .wrapper .team ul li h3 {
@@ -192,6 +194,9 @@ body {
 .wrapper .portfolio ul li {
 	overflow: hidden;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.wrapper .portfolio ul li:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .wrapper .portfolio ul li .text {
 	position: relative;
