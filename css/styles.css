@@ -87,7 +87,7 @@ body {
 	margin-top: 69px;
 	max-width: 496px;
 }
-.wrapper .solutions .btn {
+.btn {
 	padding: 16px 32px;
 	border-radius: 4px;
 	margin-bottom: 69px;
@@ -327,11 +327,10 @@ header ul li a:active,
 header ul li a:focus {
 	border-color: var(--pressed);
 }
-.wrapper .solutions .btn:hover,
-.wrapper .solutions .btn:focus {
+.btn:hover,
+.btn:focus {
 	cursor: pointer;
 	background-color: var(--pressed);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 section {
 	background-color: var(--white);
