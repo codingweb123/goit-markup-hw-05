@@ -523,6 +523,10 @@ svg.icon {
 	margin-bottom: 8px;
 }
 
+.modal-overlay .comment-group {
+	margin-bottom: 16px;
+}
+
 .modal-overlay .form-label {
 	display: block;
 	font-size: 12px;
@@ -540,6 +544,7 @@ svg.icon {
 .modal-overlay .terms {
 	flex-direction: row;
 	width: 100%;
+	margin-bottom: 24px;
 }
 
 .modal-overlay .form-input:not([type="checkbox"]) {
@@ -571,7 +576,17 @@ svg.icon {
 	display: flex;
 	align-items: center;
 }
-
+.modal-overlay .checkbox-container span {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	fill: transparent;
+	width: 16px;
+	height: 16px;
+	border: 1px solid rgba(46, 47, 66, 0.4);
+	border-radius: 2px;
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .modal-overlay .checkbox-container .icon {
 	position: absolute;
 	opacity: 0;
@@ -582,8 +597,10 @@ svg.icon {
 .modal-overlay .form-input[type="checkbox"]:checked {
 	background-color: var(--pressed);
 }
-.modal-overlay .form-input[type="checkbox"]:checked ~ .icon {
-	opacity: 1;
+.modal-overlay .form-input[type="checkbox"]:checked ~ span {
+	border: none;
+	background-color: var(--pressed);
+	fill: var(--light);
 }
 
 .modal-overlay .terms {
@@ -619,17 +636,27 @@ svg.icon {
 	height: 120px;
 	padding: 8px 16px;
 	resize: none;
+	font-size: 12px;
+	line-height: 1.17;
+	letter-spacing: 0.04em;
+	color: rgba(46, 47, 66, 0.4);
+	border: 1px solid rgba(46, 47, 66, 0.4);
+	transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-overlay button[type="submit"] {
-	display: flex;
+	display: block;
 	align-self: center;
 	justify-self: center;
 	justify-content: center;
 	align-items: center;
-	width: 169px;
+	min-width: 169px;
 	height: 56px;
 	margin-top: 24px;
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: 0.04em;
+	cursor: pointer;
 	color: var(--white);
 	border-radius: 4px;
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
