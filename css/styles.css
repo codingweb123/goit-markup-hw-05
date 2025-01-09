@@ -575,6 +575,7 @@ svg.icon {
 .modal-overlay .checkbox-container {
 	display: flex;
 	align-items: center;
+	margin-bottom: 24px;
 }
 .modal-overlay .checkbox-container span {
 	display: inline-flex;
@@ -632,7 +633,7 @@ svg.icon {
 	color: rgba(117, 117, 117, 0.5);
 }
 
-.modal-overlay textarea.form-input {
+.modal-overlay .form-group.comment-group textarea.form-input {
 	height: 120px;
 	padding: 8px 16px;
 	resize: none;
@@ -680,7 +681,18 @@ svg.icon {
 .modal-overlay .form-input:focus-visible ~ .icon {
 	color: var(--primary);
 }
-
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
 .modal-overlay .close {
 	position: absolute;
 	top: 24px;
