@@ -545,6 +545,7 @@ svg.icon {
 	flex-direction: row;
 	width: 100%;
 	margin-bottom: 24px;
+	line-height: 1.17;
 }
 
 .modal-overlay .form-input:not([type="checkbox"]) {
@@ -598,7 +599,7 @@ svg.icon {
 .modal-overlay .form-input[type="checkbox"]:checked {
 	background-color: var(--pressed);
 }
-.modal-overlay .form-input[type="checkbox"]:checked ~ span {
+.modal-overlay .form-input[type="checkbox"]:checked ~ label > span {
 	border: none;
 	background-color: var(--pressed);
 	fill: var(--light);
@@ -643,6 +644,12 @@ svg.icon {
 	color: rgba(46, 47, 66, 0.4);
 	border: 1px solid rgba(46, 47, 66, 0.4);
 	transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-overlay .form-group.comment-group textarea.form-input:focus,
+.modal-overlay .form-group.comment-group textarea.form-input:focus-visible,
+.modal-overlay .form-group.comment-group textarea.form-input:active {
+	border-color: var(--primary);
 }
 
 .modal-overlay button[type="submit"] {
