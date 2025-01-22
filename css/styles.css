@@ -541,11 +541,11 @@ svg.icon {
 	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-overlay label.form-label.terms {
+.modal-overlay .terms {
 	flex-direction: row;
 	width: 100%;
-	line-height: 1.17;
 	margin-bottom: 24px;
+	line-height: 1.17;
 }
 
 .modal-overlay .form-input:not([type="checkbox"]) {
