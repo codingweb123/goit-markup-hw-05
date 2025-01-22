@@ -28,9 +28,6 @@ a {
 button {
 	border: 0;
 }
-input, textarea {
-	outline: transparent;
-}
 body {
 	font-family: "Roboto", sans-serif;
 	line-height: 1.333;
@@ -47,6 +44,17 @@ body {
 	background-color: var(--white);
 	box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
 		0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+.container {
+    width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0;
 }
 .header .header-list {
 	display: flex;
@@ -66,16 +74,15 @@ body {
 .header .header-contacts ul li a {
 	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.wrapper .section {
+.section {
 	padding: 120px 156px;
 }
-.wrapper .solutions {
+.solutions {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	max-width: 1440px;
-	gap: 48px;
 	background-image: linear-gradient(
 			rgba(46, 47, 66, 0.7),
 			rgba(46, 47, 66, 0.7)
@@ -85,8 +92,17 @@ body {
 	background-size: cover;
 	background-position: center;
 	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	margin: 0 auto;
+	background-color: var(--dark);
 }
-.wrapper .solutions .solutions-title {
+.solutions .container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 48px;
+}
+.solutions .solutions-title {
 	margin-top: 69px;
 	max-width: 496px;
 }
@@ -98,24 +114,22 @@ body {
 	color: var(--white);
 	line-height: 1.5;
 	letter-spacing: 0.04em;
+	cursor: pointer;
 	background-color: var(--primary);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.wrapper .skills ul {
+.skills ul {
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	flex-wrap: wrap;
-	width: 100%;
 	gap: 24px;
 }
-.wrapper .skills ul li {
+.skills ul li {
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
 	max-width: 264px;
 }
-.wrapper .skills ul li div.icon {
+.skills ul li div.icon {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -126,45 +140,43 @@ body {
 	border: 1px solid var(--subtle-text);
 	background-color: var(--light);
 }
-.wrapper .skills h2 {
+.skills h2 {
 	display: none;
 }
-.wrapper .team {
+.team {
 	display: flex;
 	flex-direction: column;
 	gap: 72px;
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
 		0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-.wrapper .team ul {
+.team ul {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	gap: 24px;
 }
-.wrapper .team ul li {
+.team ul .team-card {
 	border-radius: 0px 0px 4px 4px;
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 8%),
 		0px 1px 1px rgba(46, 47, 66, 16%), 0px 2px 1px rgba(46, 47, 66, 8%);
 }
-.wrapper .team ul li .img,
-.wrapper .team ul li .text {
-	padding: 32px 0;
-}
-.wrapper .team ul li .icons {
+.team ul li .icons {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 24px;
 	padding-top: 8px;
-	padding-bottom: 32px;
 }
-.wrapper .team ul li .icons li {
+.team ul .team-card .text {
+	padding: 32px 0;
+}
+.team ul li .icons li {
 	width: 40px;
 	height: 40px;
 }
-.wrapper .team ul li .icons a.icon {
+.team ul li .icons a.icon {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -174,57 +186,50 @@ body {
 	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	background-color: var(--primary);
 }
-.wrapper .team ul li .icons a.icon svg.icon {
+.team ul li .icons a.icon svg.icon {
 	fill: var(--light);
 }
-.wrapper .team ul li:hover .icons a.icon,
-.wrapper .team ul li:focus .icons a.icon,
-.wrapper .team ul li:active .icons a.icon {
+.team ul li:hover .icons a.icon,
+.team ul li:focus .icons a.icon,
+.team ul li:active .icons a.icon {
 	background-color: var(--pressed);
 }
-.wrapper .team ul li a:hover,
-.wrapper .team ul li a:focus,
-.wrapper .team ul li a:active {
+.team ul li .icons a.icon:hover,
+.team ul li .icons a.icon:focus {
 	background-color: var(--pressed);
 }
-.wrapper .team ul li h3 {
-	margin-top: 24px;
-}
-.wrapper .team ul li p {
-	margin-top: 8px;
-}
-.wrapper .portfolio {
+.portfolio {
 	display: flex;
 	flex-direction: column;
 	gap: 72px;
 }
-.wrapper .portfolio ul {
+.portfolio ul {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 48px 24px;
 }
-.wrapper .portfolio ul li {
+.portfolio ul li {
 	overflow: hidden;
 	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.wrapper .portfolio ul li:hover {
+.portfolio ul li:hover {
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
 		0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-.wrapper .portfolio ul li .text {
+.portfolio ul li .text {
 	position: relative;
 	width: 100%;
 	overflow: hidden;
 	z-index: 99;
 	background-color: var(--white);
 }
-.wrapper .portfolio ul li .image {
+.portfolio ul li .image {
 	position: relative;
 	width: 100%;
 	overflow: hidden;
 	background-color: var(--white);
 }
-.wrapper .portfolio ul li .cover {
+.portfolio ul li .cover {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -234,16 +239,17 @@ body {
 	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 	background-color: var(--primary);
 }
-.wrapper .portfolio ul li:hover {
+.portfolio ul li:hover {
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
 		0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-.wrapper .portfolio ul li:hover .image p {
+.portfolio ul li:hover .image p {
 	transform: translateY(0%);
 }
-.wrapper .portfolio ul li .image p {
+.portfolio ul li .image p {
     position: absolute;
-    top: 0;
+    top: 0px;
+	left: -16px;
 	width: 100%;
 	height: 100%;
 	transform: translateY(100%);
@@ -256,11 +262,11 @@ body {
 	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background: var(--primary);
 }
-.wrapper .portfolio ul li h3 {
+.portfolio ul li h3 {
 	margin-top: 27px;
 	margin-left: 16px;
 }
-.wrapper .portfolio ul li p {
+.portfolio ul li p {
 	margin-top: 8px;
 	margin-bottom: 32px;
 	margin-left: 16px;
@@ -316,6 +322,7 @@ nav ul li a::after {
 	border-radius: 2px;
 	background-color: var(--pressed);
 	bottom: -1px;
+	transform: translateY(26px);
 	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 nav ul li a.active {
@@ -332,14 +339,10 @@ header ul li a:focus {
 }
 .btn:hover,
 .btn:focus {
-	cursor: pointer;
 	background-color: var(--pressed);
 }
 section {
 	background-color: var(--white);
-}
-.solutions {
-	background-color: var(--dark);
 }
 h1 {
 	font-size: 56px;
@@ -357,6 +360,7 @@ h2 {
 	text-align: center;
 	text-transform: capitalize;
 	color: var(--dark);
+	margin-bottom: 72px;
 }
 h3 {
 	font-size: 20px;
@@ -368,7 +372,7 @@ h3 {
 .team {
 	background-color: var(--light);
 }
-.team ul li {
+.team .container > ul > .team-card {
 	text-align: center;
 	background-color: var(--white);
 }
@@ -394,46 +398,34 @@ h3 {
 	flex-direction: column;
 	gap: 16px;
 }
-.footer .socials p {
-	color: var(--white);
-	font-size: 16px;
-	font-weight: 500;
-	line-height: 1.5;
-	letter-spacing: 0.02em;
-	margin-bottom: 16px;
-}
 .footer .subscribe {
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
-}
-.footer .subscribe svg {
-	margin-left: 16px;
-}
-.footer .subscribe p {
-	color: var(--white);
-	font-size: 16px;
-	font-weight: 500;
-	line-height: 1.5;
-	letter-spacing: 0.02em;
-	margin-bottom: 16px;
+	margin-left: 80px;
 }
 .footer .subscribe form {
 	display: flex;
 	gap: 24px;
 }
+.footer .subscribe p {
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+	color: var(--white);
+}
 .footer .subscribe form input {
 	width: 264px;
 	height: 40px;
+	padding: 8px 16px;
+	border-radius: 4px;
 	border: 1px solid var(--white);
-	background-color: transparent;
+	color: var(--white);
 	font-size: 12px;
 	line-height: 2;
 	letter-spacing: 0.04em;
-	padding-left: 16px;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-	border-radius: 4px;
-	color: var(--white);
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+	background-color: transparent;
 }
 .footer .subscribe form input::placeholder {
 	color: var(--white);
@@ -442,18 +434,20 @@ h3 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-family: 'Roboto', sans-serif;
+	width: 165px;
+	height: 40px;
+	padding: 8px 24px;
+	gap: 16px;
+	color: var(--white);
+	background-color: var(--primary);
+}
+.footer .socials p {
+	color: var(--white);
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 1.5;
-	letter-spacing: 0.04em;
-	min-width: 165px;
-	height: 40px;
-	cursor: pointer;
-	background-color: var(--primary);
-	border: none;
-	border-radius: 4px;
-	color: var(--white);
+	letter-spacing: 0.02em;
+	margin-bottom: 16px;
 }
 .footer .socials .icons {
 	display: flex;
@@ -477,8 +471,6 @@ h3 {
 	background-color: var(--primary);
 }
 .footer .socials .icons a.icon svg.icon {
-	width: 24px;
-	height: 24px;
 	fill: var(--light);
 }
 .footer .footer-text {
@@ -541,11 +533,11 @@ svg.icon {
 	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-overlay .terms {
+.modal-overlay label.form-label.terms {
 	flex-direction: row;
 	width: 100%;
-	margin-bottom: 24px;
 	line-height: 1.17;
+	margin-bottom: 24px;
 }
 
 .modal-overlay .form-input:not([type="checkbox"]) {
@@ -604,7 +596,9 @@ svg.icon {
 	background-color: var(--pressed);
 	fill: var(--light);
 }
-
+.modal-overlay .form-input[type="checkbox"]:checked ~ label > span > .icon {
+	opacity: 1;
+}
 .modal-overlay .terms {
 	font-size: 12px;
 	font-weight: 400;
@@ -743,8 +737,6 @@ svg.icon {
 
 .modal-overlay .modal {
 	position: absolute;
-	top: 50%;
-	left: 50%;
 	display: flex;
 	flex-direction: column;
 	width: 408px;
