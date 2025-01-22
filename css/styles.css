@@ -433,6 +433,8 @@ h3 {
 }
 .footer .subscribe form button {
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	min-width: 165px;
 	height: 40px;
 	padding: 8px 24px;
